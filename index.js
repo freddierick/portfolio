@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 80
+const port = 2103
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 const projects = require("./projects.json")

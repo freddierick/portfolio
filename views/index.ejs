@@ -8,8 +8,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <!-- fonts -->
+    <script src="https://kit.fontawesome.com/3066e8d6ec.js" crossorigin="anonymous"></script>
+
     <!-- Title -->
     <title>Freddie's Portfolio</title>
+
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
 
     <!-- meta -->
     <meta property="og:title" content="Site Title" />
@@ -86,7 +91,7 @@ html {
                         <%statusObj = {type:"warning",text:"Status: In Development"}%>
                     <%}%>
                     <div style="text-align: center;">
-                        <span  style="min-width: 30%;-width: 40%; margin: 5px;" class="badge badge-<%=statusObj.type%> text-center"><h6><%=statusObj.text%></h6></span>
+                        <span  style="min-width: 30%;-width: 40%; margin: 5px;" class="badge badge-<%=statusObj.type%> text-center"><h6><i class="fas fa-circle"></i> <%=statusObj.text%></h6></span>
                     </div>
                     <!-- /status -->
                   
@@ -112,11 +117,11 @@ html {
                     </div>
                     <!-- /slideHandler -->
 
-                    <a class="carousel-control-prev" href="#<%=element.title%>" role="button" data-slide="prev">
+                    <a target="_blank" class="carousel-control-prev" href="#<%=element.title%>" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#<%=element.title%>" role="button" data-slide="next">
+                    <a target="_blank" class="carousel-control-next" href="#<%=element.title%>" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
@@ -134,7 +139,7 @@ html {
                   <% element.buttons.forEach(button => { %> 
                     <% let state="" %>
                     <% if(!button.active) state="disabled" %>
-                    <a href="<%=button.herf%>"><button style="margin: 8px;" class="btn btn-primary btn-lg <%=state%>"><%=button.name%></button></a>
+                    <a target="_blank" href="<%=button.herf%>"><button style="margin: 8px;" class="btn btn-primary btn-lg <%=state%>"><%=button.name%></button></a>
                       <%  });%>
                   </div>
 
@@ -161,25 +166,36 @@ html {
         <!-- /top -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 0px;">
-          <a class="navbar-brand" href="#">Freddie Wren</a>
+          <a target="_blank" class="navbar-brand" href="#">Freddie Wren</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#about">About Me <span class="sr-only">(current)</span></a>
+                <a target="_blank" class="nav-link" href="#about">About Me <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects </a>
+                <a target="_blank" class="nav-link" href="#projects">Projects </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a target="_blank" class="nav-link" href="#contact">Contact</a>
               </li>
 
             </ul>
           </div>
         </nav>
+        <hr/>
+
+
+        <!-- socialMedia -->
+        <div id="projects" class="container text-center mx-auto" style="padding: 10px;margin: auto;  text-align: center;">
+        <h1 class="display-4">Social media</h1>
+        <p class="mb-0">Follow me on my socials </p>
+        <a target="_blank" target="_blank" href="https://www.linkedin.com/in/freddie-wren-b9a2a9191/"><i class="fa fa-linkedin-square" style="font-size:48px;color:gray"></i></a>
+          <a target="_blank" target="_blank" href="https://github.com/freddierick"><i class="fa fa-github-square" style="font-size:48px;color:gray"></i></a>
+        </div>
+        <!-- /socialMedia -->
 
         <hr/>
 
@@ -214,23 +230,24 @@ html {
           <h1 class="display-4">Contact Me</h1>
           <p class="mb-0">Any questions, comments or suggestions? Don't hesitate to contact me!</p>
           <br>
-        <form>
+          <form method="POST" action="https://post.freddie.pw/">
+            <input type="text" name="postMailID" value="5fa727cedc1d1a1a1e76cd89" hidden>
           <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
           </div>
           <div class="form-group">
             <label for="Description">Description</label>
-            <textarea class="form-control" id="description" rows="5"></textarea>
+            <textarea class="form-control" name="desc" id="description" rows="5"></textarea>
           </div>
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Subscribe to my mailing list?</label>
+            <label class="form-check-label" name="mailList" for="exampleCheck1">Subscribe to my mailing list?</label>
           </div><br>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -251,7 +268,7 @@ html {
             <div class="col-md-6 mt-md-0 mt-3">
           
           <h5 class="text-uppercase">Like this site?</h5>
-          <p> <a href="https://github.com/freddierick/portfolio">Downloaded it here</a>, if you wish to use it without my branding please contact me via the form! </p>
+          <p> <a target="_blank" href="https://github.com/freddierick/portfolio">Downloaded it here</a>, if you wish to use it without my branding please contact me via the form! </p>
           
           </div>
           
@@ -263,16 +280,16 @@ html {
           
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://pokehunt.xyz/">Pokehunt</a>
+                    <a target="_blank" href="https://pokehunt.xyz/">Pokehunt</a>
                   </li>
                   <li>
-                    <a href="https://post.freddie.pw">PostBox</a>
+                    <a target="_blank" href="https://post.freddie.pw">PostBox</a>
                   </li>
                   <li>
-                    <a href="https://chat.freddie.pw">ChatRoom</a>
+                    <a target="_blank" href="https://chat.freddie.pw">ChatRoom</a>
                   </li>
                   <li>
-                    <a href="https://paypal.me/freddiewren">Doante</a>
+                    <a target="_blank" href="https://paypal.me/freddiewren">Doante</a>
                   </li>
                 </ul>
     
@@ -283,16 +300,16 @@ html {
           
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://github.com/freddierick">GitHub</a>
+                    <a target="_blank" href="https://github.com/freddierick">GitHub</a>
                   </li>
                   <li>
-                    <a href="https://devdial.xyz">DevDial</a>
+                    <a target="_blank" href="https://devdial.xyz">DevDial</a>
                   </li>
                   <li>
-                    <a href="https://freddie.host">Hosting</a>
+                    <a target="_blank" href="https://freddie.host">Hosting</a>
                   </li>
                   <li>
-                    <a href="https://pokehunt.xyz/leaderboard/donations">Donations</a>
+                    <a target="_blank" href="https://pokehunt.xyz/leaderboard/donations">Donations</a>
                   </li>
                 </ul>
     
@@ -305,8 +322,8 @@ html {
           </div>
           
           <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                      <a href="https://freddie.pw/"> Freddie Wren </a>
-                      made with ❤️ ➕ 💻  by <a href="https://freddie.pw/"> freddie.pw </a>
+                      <a target="_blank" href="https://freddie.pw/"> Freddie Wren </a>
+                      made with ❤️ ➕ 💻  by <a target="_blank" href="https://freddie.pw/"> freddie.pw </a>
                       in the UK
                       </div> 
           
@@ -349,7 +366,7 @@ html {
     }
   }
   function typeWriter2() {
-   txt = 'Software engineer | thibhogfd | idsoajhio | fdsjikofdjs';
+   txt = 'Software Engineer | Network Admin | Open Source Enthusiast | Cyber Security | IT Support ';
     if (i < txt.length) {
       document.getElementById("page-title2").innerHTML += txt.charAt(i);
       i++;

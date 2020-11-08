@@ -92,9 +92,14 @@
         "status":1,
         "images":[
             {
-                "src":"/postbox/homepage.png",
+                "src":"/postbox/dashboard.png",
                 "title":"Homepage",
                 "description":"Create postboxes"
+            },
+            {
+                "src":"/postbox/postbox.png",
+                "title":"PostBox",
+                "description":"View your mail "
             }
         ],
         "buttons":[
@@ -119,9 +124,19 @@
         "status":1,
         "images":[
             {
-                "src":"/chatrooms/chatroom.png",
+                "src":"/chatrooms/dashboard.png",
                 "title":"Homepage",
-                "description":"Create postboxes"
+                "description":""
+            },
+            {
+                "src":"/chatrooms/chatroom.png",
+                "title":"ChatRoom",
+                "description":""
+            },
+            {
+                "src":"/chatrooms/login.png",
+                "title":"Login ",
+                "description":""
             }
         ],
         "buttons":[
@@ -138,6 +153,39 @@
             {
                 "name":"NPM bot package",
                 "herf":"https://www.npmjs.com/package/chat-room-bot",
+                "active":true
+            }
+        ]
+    },
+
+
+    {
+        "stared":false,
+        "title":"FreddieHost",
+        "description":"Freddie host is a free and paid for hosting service that allows anyone to quickly easy create a game or application server! We have over 30 clients and counting.",
+        "thumbnail":"/freddiehost/logo.png",
+        "status":1,
+        "images":[
+            {
+                "src":"/freddiehost/dashboard.png",
+                "title":"Dashboard",
+                "description":""
+            },
+            {
+                "src":"/freddiehost/home.png",
+                "title":"Homepage",
+                "description":""
+            },
+            {
+                "src":"/freddiehost/login.png",
+                "title":"Login ",
+                "description":""
+            }
+        ],
+        "buttons":[
+            {
+                "name":"Website",
+                "herf":"https://freddie.host",
                 "active":true
             }
         ]
