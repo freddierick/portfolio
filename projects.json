@@ -1,6 +1,6 @@
 [
     {
-        "stared":true,
+        "stared":false,
         "title":"PetroPal",
         "description":"PetroPal is a new and inventive way of allowing communities to host servers. It's a simple sign up procedure then you can allow anyone to create a server on your hosting platform.",
         "thumbnail":"/Ptero-Pal/logo.png",
@@ -162,9 +162,9 @@
     {
         "stared":false,
         "title":"FreddieHost",
-        "description":"Freddie host is a free and paid for hosting service that allows anyone to quickly easy create a game or application server! We have over 30 clients and counting.",
+        "description":"Freddie host is a free and paid for hosting service that allows anyone to quickly easy create a game or application server! We have over 100 clients and counting.",
         "thumbnail":"/freddiehost/logo.png",
-        "status":1,
+        "status":3,
         "images":[
             {
                 "src":"/freddiehost/dashboard.png",
@@ -186,6 +186,73 @@
             {
                 "name":"Website",
                 "herf":"https://freddie.host",
+                "active":false
+            }
+        ]
+    },
+    {
+        "stared":true,
+        "title":"Micks Maths Mayhem",
+        "description":"This is a fun maths game i made in React for a school assignment.",
+        "thumbnail":"/mics/logo.png",
+        "status":1,
+        "images":[
+            {
+                "src":"/mics/home.png",
+                "title":"Homepage",
+                "description":""
+            },
+            {
+                "src":"/mics/game.png",
+                "title":"Login",
+                "description":""
+            },
+            {
+                "src":"/mics/lb.png",
+                "title":"Leaderbaord ",
+                "description":""
+            }
+        ],
+        "buttons":[
+            {
+                "name":"Website",
+                "herf":"https://mics-maths-mayhem.web.app/",
+                "active":true
+            },
+            {
+                "name":"Code",
+                "herf":"https://github.com/freddierick/maths-game",
+                "active":true
+            }
+        ]
+    },
+    {
+        "stared":true,
+        "title":"Slash",
+        "description":"A general utility bot that has a very powerful AI AntiAlt system.",
+        "thumbnail":"/slash/logo.png",
+        "status":0,
+        "images":[
+            {
+                "src":"/slash/home.png",
+                "title":"Homepage",
+                "description":""
+            },
+            {
+                "src":"/slash/dashboard.png",
+                "title":"Dashboard",
+                "description":""
+            },
+            {
+                "src":"/slash/dashboard2.png",
+                "title":"Management Console",
+                "description":""
+            }
+        ],
+        "buttons":[
+            {
+                "name":"Website",
+                "herf":"https://discord4.fun/",
                 "active":true
             }
         ]

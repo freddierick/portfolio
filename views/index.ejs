@@ -65,7 +65,7 @@ html {
     <body onload="onLoad()">
         <% projects.forEach(element => { %>
         <!-- model -->
-        <div class="modal fade <%=element.title%>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade <%=element.title.replace(" ","-").replace(" ","-").replace(" ","-") %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <!-- head -->
@@ -207,7 +207,7 @@ html {
             <div class="row justify-content-center" style=" text-align: center;">
               <% projectsCards = []; projects.map(x => {if(x.stared)projectsCards.push(x)}); projects.map(x => {if(!x.stared) projectsCards.push(x)});%>
              <%  projectsCards.forEach(element => { %>
-                <div class="card project-card"  data-toggle="modal" data-target=".<%=element.title%>" style="width: 18rem; margin: 5px;">
+                <div class="card project-card"  data-toggle="modal" data-target=".<%= element.title.replace(" ","-").replace(" ","-").replace(" ","-") %>" style="width: 18rem; margin: 5px;">
                   <% if(element.stared){ %>
                   <img src="/star.png" class="stared-overlay" height="50" width="50"></img> 
                   <%}%>
